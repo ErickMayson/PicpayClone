@@ -1,0 +1,41 @@
+import React from 'react';
+import {MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
+
+import {Wrapper, Header, BalanceContainer, Balance, BalanceTitle,HeaderIconsRight, HeaderGift, Container } from './styles'
+
+import Suggestions from '../../components/Suggestions';
+import Activities from '../../components/Activities';
+import Tips from '../../components/Tips';
+import Banner from '../../components/Banner';
+
+export default function Home() {
+    return (
+    <Wrapper>
+
+    <Container>
+        <Header>
+            <MaterialCommunityIcons name="qrcode-scan" size={30} color="#10c86e" />
+
+            <BalanceContainer>
+                <BalanceTitle>Meu Saldo</BalanceTitle>
+                <Balance>R$ 0,00</Balance>
+            </BalanceContainer>
+
+             <HeaderIconsRight>
+                <HeaderGift>
+                 <AntDesign name="gift" size={30} color="#10c86e" /> 
+                </HeaderGift>
+             <MaterialCommunityIcons name="brightness-percent" size={30} color="#10c86e" />
+            </HeaderIconsRight>
+
+        </Header>
+
+        <Suggestions />
+        <Activities />
+        <Tips />
+        <Banner />
+     </Container>
+
+    </Wrapper>
+    );
+}
